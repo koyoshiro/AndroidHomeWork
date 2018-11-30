@@ -3,6 +3,7 @@ package com.example.jlgu.activitytest;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,12 +11,13 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.content.Intent;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        Log.d("FirstActivity",this.toString());
         setContentView(R.layout.first_layout);
         Button btn1 = (Button) findViewById(R.id.button_1);
         btn1.setOnClickListener(new View.OnClickListener() {
